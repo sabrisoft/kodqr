@@ -1,17 +1,6 @@
 version: '3'
 
 services:
-  db:
-    image: mariadb:latest
-    container_name: sd_qrman_db
-    restart: unless-stopped
-    volumes:
-      - qrman_db:/var/lib/mysql
-    env_file:
-      - .env
-    networks:
-      - qrnet
-
   redis:
     image: redis:alpine
     container_name: sd_qrman_redis
