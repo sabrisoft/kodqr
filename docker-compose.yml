@@ -13,7 +13,6 @@ services:
     container_name: sd_qrman_app
     restart: unless-stopped
     depends_on:
-      - db
       - redis
     volumes:
       - qrman_config:/app/config
